@@ -1,0 +1,12 @@
+name: Repository Dispatch2
+on:
+  repository_dispatch:
+    types: [my-event]
+jobs:
+  myEvent:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo 1
+        uses: actions/checkout@v4
+        with:
+          repository: DenzMoses/ghactions
